@@ -41,7 +41,9 @@ const Header = () => {
     <div>
       <Top />
       <div className="flex items-center px-10 justify-between py-3">
-        <h1 className="text-2xl text-[#4F709C">easy-shop</h1>
+        <h1 className="text-2xl text-[#4F709C">
+          <Link to={"/"}>easy-shop</Link>
+        </h1>
         <div className="flex items-center gap-10">
           {links.map((link) => (
             <div key={link.id}>
@@ -51,7 +53,6 @@ const Header = () => {
                     className="flex items-center gap-2 font-medium cursor-pointer "
                     onClick={() => {
                       setShowCat(!showCat);
-                      console.log(prev);
                     }}
                   >
                     {link.title}
@@ -66,7 +67,7 @@ const Header = () => {
                             }
                           : {
                               height: "0%",
-                              transition:.3
+                              transition: 0.3,
                             }
                       }
                       exit={{
@@ -75,8 +76,8 @@ const Header = () => {
                       }}
                       className="absolute top-10 left-5 bg-white px-3 py-3 rounded-lg w-60 h-0 overflow-hidden"
                     >
-                      {category.map((link) => (
-                        <Link to={link}>
+                      {category.map((link, idx) => (
+                        <Link to={`productsDetails/${link}`} key={idx} onClick={() => setShowCat(false)}>
                           <h1 className="font-medium leading-10 hover:bg-slate-300 px-2 rounded-md select-none">
                             {link}
                           </h1>

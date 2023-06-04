@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Wrapper from "./components/Wrapper";
 import Products from "./pages/Products";
-import PCategory from "./pages/PCategory";
+import ProductDetails from "./pages/ProductDetails";
 
 const Layout = () => {
   return (
@@ -30,10 +30,10 @@ const App = () => {
           path: "/products/:category",
           element: <Products />,
         },
-        // {
-        //   path: "/products/:id",
-        //   element: <PCategory />,
-        // },
+        {
+          path: "/productsDetails/:id",
+          element: <ProductDetails />,
+        },
       ],
     },
   ]);

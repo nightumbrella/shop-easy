@@ -18,10 +18,10 @@ const Home = () => {
           </h1>
         </div>
         <div className="grid grid-cols-4 place-items-center">
-          <Product />
-          <Product />
-          <Product />
-          <Product />
+          <Product category={"add"} />
+          <Product category={"add"} />
+          <Product category={"add"} />
+          <Product category={"add"} />
         </div>
       </div>
     </div>
