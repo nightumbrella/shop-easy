@@ -1,5 +1,6 @@
 import { BsTelephone } from "react-icons/bs";
 import { IoIosArrowDown } from "react-icons/io";
+import LocationSelector from "./LocationSelector";
 
 const Top = () => {
   return (
@@ -8,18 +9,19 @@ const Top = () => {
         <BsTelephone className="white" />
         <h3 className="white">+0095741135</h3>
       </div>
-      <h1 className="white">Get 50% Off on Selected Items | Shop Now</h1>
+      <h1 className="white max-md:hidden">
+        Get 50% Off on Selected Items | Shop Now
+      </h1>
       <div className="flex items-center gap-5">
         <div className="flex items-center gap-2">
           <h1 className="white">Eng</h1>
           <IoIosArrowDown className="white" />
         </div>
         <div className="flex items-center gap-2">
+          {/* <LocationSelector /> */}
           <h1 className="white">Location</h1>
           <IoIosArrowDown className="white" />
-          <div>
-            
-          </div>
+          <div></div>
         </div>
       </div>
     </div>

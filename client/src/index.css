@@ -10,3 +10,15 @@
 .white{
   @apply text-white
 }
+
+.location{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+*{
+  list-style: none;
+}
+.location::-webkit-scrollbar {
+  display: none;
+}
