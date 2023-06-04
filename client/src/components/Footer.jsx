@@ -30,13 +30,13 @@ const Footer = () => {
   ];
 
   return (
-    <div className="bg-green-800 white px-10 py-10 flex justify-between">
+    <div className="bg-[#F5EFE7] text-black px-10 py-10 flex justify-between">
       <div className="flex gap-20">
         <div>
           <h4 className="text-xl mb-5">Shop by Category</h4>
           <ul>
-            {category.map((cat) => (
-              <li className="mb-2">
+            {category.map((cat,idx) => (
+              <li className="mb-2" key={idx}>
                 <Link to={cat} className="text-[#bcbcbc] ">
                   {cat}
                 </Link>
@@ -47,8 +47,8 @@ const Footer = () => {
         <div>
           <h4 className="text-xl mb-5">About</h4>
           <ul>
-            {about.map((cat) => (
-              <li className="mb-2">
+            {about.map((cat,idx) => (
+              <li className="mb-2" key={idx}>
                 <Link to={cat} className="text-[#bcbcbc] ">
                   {cat}
                 </Link>
@@ -59,8 +59,8 @@ const Footer = () => {
         <div>
           <h4 className="text-xl mb-5">Policy</h4>
           <ul>
-            {Policy.map((cat) => (
-              <li className="mb-2">
+            {Policy.map((cat,idx) => (
+              <li className="mb-2" key={idx}>
                 <Link to={cat} className="text-[#bcbcbc] ">
                   {cat}
                 </Link>
@@ -73,8 +73,8 @@ const Footer = () => {
       </div>
       <div className="">
         <div className="flex gap-5 justify-end mb-10">
-          {social.map((social) => (
-            <div className="rounded-full p-3 border hover:bg-green-300 cursor-pointer duration-300">
+          {social.map((social,idx) => (
+            <div key={idx} className="rounded-full p-3 border hover:bg-green-300 cursor-pointer duration-300">
               {social}
             </div>
           ))}

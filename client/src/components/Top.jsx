@@ -4,23 +4,23 @@ import LocationSelector from "./LocationSelector";
 
 const Top = () => {
   return (
-    <div className="flex px-5 py-1 items-center justify-between bg-green-800">
+    <div className="flex px-5 py-1 items-center justify-between bg-[#F5EFE7] text-black">
       <div className="flex items-center gap-2">
-        <BsTelephone className="white" />
-        <h3 className="white">+0095741135</h3>
+        <BsTelephone className="text-black" />
+        <h3 className="text-black">+0095741135</h3>
       </div>
-      <h1 className="white max-md:hidden">
+      <h1 className="text-black max-md:hidden">
         Get 50% Off on Selected Items | Shop Now
       </h1>
       <div className="flex items-center gap-5">
         <div className="flex items-center gap-2">
-          <h1 className="white">Eng</h1>
-          <IoIosArrowDown className="white" />
+          <h1 className="text-black">Eng</h1>
+          <IoIosArrowDown className="text-black" />
         </div>
         <div className="flex items-center gap-2">
           {/* <LocationSelector /> */}
-          <h1 className="white">Location</h1>
-          <IoIosArrowDown className="white" />
+          <h1 className="text-black">Location</h1>
+          <IoIosArrowDown className="text-black" />
           <div></div>
         </div>
       </div>

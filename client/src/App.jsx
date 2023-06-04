@@ -3,6 +3,8 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Wrapper from "./components/Wrapper";
+import Products from "./pages/Products";
+import PCategory from "./pages/PCategory";
 
 const Layout = () => {
   return (
@@ -24,12 +26,20 @@ const App = () => {
           path: "/",
           element: <Home />,
         },
+        {
+          path: "/products/:category",
+          element: <Products />,
+        },
+        // {
+        //   path: "/products/:id",
+        //   element: <PCategory />,
+        // },
       ],
     },
   ]);
   return (
     <Wrapper>
-        <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </Wrapper>
   );
 };
