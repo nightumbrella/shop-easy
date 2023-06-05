@@ -3,6 +3,7 @@ import HeroBanner from "../components/HeroBanner";
 import { Link } from "react-router-dom";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import Product from "../components/Product";
+import { product } from "../../product";
 
 const Home = () => {
   return (
@@ -17,11 +18,10 @@ const Home = () => {
             </Link>
           </h1>
         </div>
-        <div className="grid grid-cols-4 place-items-center">
-          <Product category={"add"} />
-          <Product category={"add"} />
-          <Product category={"add"} />
-          <Product category={"add"} />
+        <div className="grid grid-cols-5 place-items-center">
+          {product.map((product) => (
+            <Product category={product.id} key={product.id} {...product} />
+          ))}
         </div>
       </div>
     </div>

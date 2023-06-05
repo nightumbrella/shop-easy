@@ -74,10 +74,14 @@ const Header = () => {
                         height: 0,
                         transition: 0.3,
                       }}
-                      className="absolute top-10 left-5 bg-white px-3 py-3 rounded-lg w-60 h-0 overflow-hidden"
+                      className="absolute top-10 left-5 bg-white px-3 py-3 rounded-lg w-60 h-0 overflow-hidden shadow-md"
                     >
                       {category.map((link, idx) => (
-                        <Link to={`productsDetails/${link}`} key={idx} onClick={() => setShowCat(false)}>
+                        <Link
+                          to={`category/${link}`}
+                          key={idx}
+                          onClick={() => setShowCat(false)}
+                        >
                           <h1 className="font-medium leading-10 hover:bg-slate-300 px-2 rounded-md select-none">
                             {link}
                           </h1>
