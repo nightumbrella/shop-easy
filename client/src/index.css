@@ -3,22 +3,35 @@
 @tailwind components;
 @tailwind utilities;
 
-
-*{
-  font-family: 'poppins',sans-serif;
+* {
+  font-family: "poppins", sans-serif;
 }
-.white{
-  @apply text-white
-}
-
-.location{
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+.white {
+  @apply text-white;
 }
 
-*{
+.location {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+* {
   list-style: none;
 }
 .location::-webkit-scrollbar {
   display: none;
+}
+.thumb {
+  width: 200px !important;
+  height: 200px !important;
+  display: flex;
+  align-items: center;
+  outline: none;
+  border: none;
+  justify-content: center;
+}
+.thumb > img {
+  width: 100px !important;
+  height: 100px !important;
+  object-fit: contain;
 }

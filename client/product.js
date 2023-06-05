@@ -1,29 +1,34 @@
-import { nanoid } from "@reduxjs/toolkit";
+import { nanoid } from "nanoid";
+
 
 export const product = [
   {
-    id: nanoid(),
+    id: 1,
     title: "airpods-red",
     thumbnail: "/headphone/airpods-red.jpg",
     price: 99,
     category: "technology",
     images: [
+    //   {
+    //     id: nanoid(),
+    //     img: "/headphone/airpods-red.jpg",
+    //   },
       {
         id: 1,
-        img: "/backend/images/airpods-1-red.jpg",
+        img: "/headphone/airpods-1-red.jpg",
       },
       {
         id: 1,
-        img: "/backend/images/airpods-2-red.jpg",
+        img: "/headphone/airpods-2-red.jpg",
       },
       {
         id: 1,
-        img: "/backend/images/airpods-3-red.jpg",
+        img: "/headphone/airpods-3-red.jpg",
       },
     ],
   },
   {
-    id: nanoid(),
+    id: 2,
     title: "airpods",
     thumbnail: "/headphone/airpods.jpg",
     price: 199,
@@ -31,17 +36,16 @@ export const product = [
     images: [
       {
         id: 1,
-        img: "/backend/images/airpods-1.jpg",
+        img: "/headphone/airpods-1.jpg",
       },
       {
         id: 1,
-        img: "/backend/images/airpods-2.jpg",
+        img: "/headphone/airpods-2.jpg",
       },
       {
         id: 1,
-        img: "/backend/images/airpods-3.jpg",
+        img: "/headphone/airpods-3.jpg",
       },
     ],
   },
 ];
-

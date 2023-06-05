@@ -5,11 +5,14 @@ import Home from "./pages/Home";
 import Wrapper from "./components/Wrapper";
 import Products from "./pages/Products";
 import ProductDetails from "./pages/ProductDetails";
-import Category from './pages/Category'
+import Category from "./pages/Category";
+import Top from "./components/Top";
 
 const Layout = () => {
   return (
     <div>
+      <Top />
+
       <Header />
       <Outlet />
       <Footer />
@@ -35,10 +38,10 @@ const App = () => {
           path: "/productsDetails/:id",
           element: <ProductDetails />,
         },
-      {
-        path:"category/:id",
-        element:<Category/>
-      }
+        {
+          path: "category/:id",
+          element: <Category />,
+        },
       ],
     },
   ]);

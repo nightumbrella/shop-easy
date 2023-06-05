@@ -30,7 +30,7 @@ const Footer = () => {
   ];
 
   return (
-    <div className="bg-[#F5EFE7] text-black px-10 py-10 flex justify-between">
+    <div className="bg-[#F5EFE7] max-md:flex-col text-black px-10 py-10 flex justify-between">
       <div className="flex gap-20">
         <div>
           <h4 className="text-xl mb-5">Shop by Category</h4>

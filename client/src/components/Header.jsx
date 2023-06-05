@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Top from "./Top";
 import { AiOutlineSearch } from "react-icons/ai";
 import { RiUser6Line } from "react-icons/ri";
 import { CgShoppingCart } from "react-icons/cg";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
+import { CiMenuBurger } from "react-icons/ci";
 
 const Header = () => {
   const links = [
@@ -38,13 +38,12 @@ const Header = () => {
   ];
   const [showCat, setShowCat] = useState(false);
   return (
-    <div>
-      <Top />
-      <div className="flex items-center px-10 justify-between py-3">
+    <div className="relative border flex items-center px-10">
+      <div className="flex items-center  justify-between py-3 flex-auto">
         <h1 className="text-2xl text-[#4F709C">
           <Link to={"/"}>easy-shop</Link>
         </h1>
-        <div className="flex items-center gap-10">
+        <div className="flex items-center gap-10 max-md:hidden">
           {links.map((link) => (
             <div key={link.id}>
               {link.category ? (
@@ -99,7 +98,7 @@ const Header = () => {
           ))}
         </div>
 
-        <div className="flex items-center gap-3 ">
+        <div className="flex items-center gap-3 max-md:hidden max-ld:hidden">
           <div className="relative w-72">
             <input
               type="text"
@@ -111,15 +110,19 @@ const Header = () => {
             </button>
           </div>
 
-          <div className="flex items-center gap-2 font-medium rounded-full hover:bg-slate-100 duration-300 cursor-pointer px-3 py-2 ml-10">
+          <div className="flex items-center gap-2 font-medium rounded-full hover:bg-slate-100 duration-300 cursor-pointer px-3 py-2 ml-10 max-lg:hidden">
             <RiUser6Line className="text-xl" />
             Account
           </div>
-          <div className="flex items-center gap-2 font-medium rounded-full hover:bg-slate-100 px-3 duration-300 cursor-pointer py-2">
+          <div className="flex items-center gap-2 font-medium rounded-full hover:bg-slate-100 px-3 duration-300 cursor-pointer py-2 max-lg:hidden">
             <CgShoppingCart className="text-xl" />
             Cart
           </div>
         </div>
+
+      </div>
+      <div className=" rounded-full p-4 bg-slate-300 md:hidden">
+        <CiMenuBurger className="text-xl " />
       </div>
     </div>
   );
