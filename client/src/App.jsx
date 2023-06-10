@@ -7,6 +7,7 @@ import Products from "./pages/Products";
 import ProductDetails from "./pages/ProductDetails";
 import Category from "./pages/Category";
 import Top from "./components/Top";
+import {} from "react";
 
 const Layout = () => {
   return (
