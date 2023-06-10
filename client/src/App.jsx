@@ -8,12 +8,13 @@ import ProductDetails from "./pages/ProductDetails";
 import Category from "./pages/Category";
 import Top from "./components/Top";
 import {} from "react";
+import MenuCategory from "./components/MenuCategory";
 
 const Layout = () => {
   return (
-    <div>
+    <div className="relative">
       <Top />
-
+      <MenuCategory />
       <Header />
       <Outlet />
       <Footer />

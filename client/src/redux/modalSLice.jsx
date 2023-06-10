@@ -10,7 +10,7 @@ const ModalReducer = createSlice({
   initialState,
   reducers: {
     changeModal: (state, action) => {
-      if (state.modal) {
+      if (state.modal === true) {
         state.modal = false;
       } else {
         state.modal = true;

@@ -4,14 +4,12 @@ import { Link } from "react-router-dom";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import Product from "../components/Product";
 import { product } from "../../product";
-import MenuCategory from "../components/MenuCategory";
 
 const Home = () => {
  
 
   return (
     <div className="px-10">
-      <MenuCategory />
       <HeroBanner />
       <div>
         <div className="flex items-center justify-between mb-10">

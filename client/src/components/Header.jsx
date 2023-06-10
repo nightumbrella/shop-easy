@@ -14,6 +14,7 @@ const Header = () => {
   const { modal } = UseModal();
   const openModal = () => {
     dispatch(changeModal());
+    console.log("click")
   };
   const links = [
     {
