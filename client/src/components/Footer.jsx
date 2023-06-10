@@ -29,8 +29,10 @@ const Footer = () => {
     <FaYoutube />,
   ];
 
+  const date =new Date().getFullYear()
+  console.log(date)
   return (
-    <div className="bg-[#F5EFE7] max-md:flex-col text-black px-10 py-10 flex justify-between">
+    <div className="bg-[#f4f4f4] mx-auto max-md:flex-col text-black px-10 py-10 flex justify-between">
       <div className="flex gap-20">
         <div>
           <h4 className="text-xl mb-5">Shop by Category</h4>
@@ -81,7 +83,7 @@ const Footer = () => {
         </div>
         <div className="text-right">
             <h2 className="flex items-center gap-2 justify-end mb-3"> <CiLocationOn className="text-2xl"/>United States</h2>
-            <h2>© 2021 | Cora Leviene All Rights Reserved</h2>
+            <h2>© {date} | easy-shop All Rights Reserved</h2>
         </div>
       </div>
     </div>

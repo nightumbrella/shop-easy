@@ -9,10 +9,6 @@ export const product = [
     price: 99,
     category: "technology",
     images: [
-    //   {
-    //     id: nanoid(),
-    //     img: "/headphone/airpods-red.jpg",
-    //   },
       {
         id: 1,
         img: "/headphone/airpods-1-red.jpg",

@@ -38,7 +38,7 @@ const Header = () => {
   ];
   const [showCat, setShowCat] = useState(false);
   return (
-    <div className="relative border flex items-center px-10">
+    <div className="relative  flex items-center px-10">
       <div className="flex items-center  justify-between py-3 flex-auto">
         <h1 className="text-2xl text-[#4F709C">
           <Link to={"/"}>easy-shop</Link>
@@ -98,8 +98,8 @@ const Header = () => {
           ))}
         </div>
 
-        <div className="flex items-center gap-3 max-md:hidden max-ld:hidden">
-          <div className="relative w-72">
+        <div className=" items-center gap-3 flex">
+          <div className="relative w-72 max-lg:hidden flex ">
             <input
               type="text"
               placeholder="Search Product..."
@@ -110,16 +110,15 @@ const Header = () => {
             </button>
           </div>
 
-          <div className="flex items-center gap-2 font-medium rounded-full hover:bg-slate-100 duration-300 cursor-pointer px-3 py-2 ml-10 max-lg:hidden">
+          <div className=" items-center gap-2 font-medium rounded-full hover:bg-slate-100 duration-300 cursor-pointer px-3 py-2 ml-10 max-xl:hidden flex">
             <RiUser6Line className="text-xl" />
             Account
           </div>
-          <div className="flex items-center gap-2 font-medium rounded-full hover:bg-slate-100 px-3 duration-300 cursor-pointer py-2 max-lg:hidden">
+          <div className=" items-center gap-2 font-medium rounded-full hover:bg-slate-100 px-3 duration-300 cursor-pointer py-2 max-xl:hidden flex">
             <CgShoppingCart className="text-xl" />
             Cart
           </div>
         </div>
-
       </div>
       <div className=" rounded-full p-4 bg-slate-300 md:hidden">
         <CiMenuBurger className="text-xl " />

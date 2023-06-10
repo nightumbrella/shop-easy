@@ -4,7 +4,7 @@ import LocationSelector from "./LocationSelector";
 
 const Top = () => {
   return (
-    <div className="flex px-5 py-1 items-center justify-between bg-[#F5EFE7] text-black">
+    <div className="flex px-5 py-1 items-center justify-between bg-[#f4f4f4] shadow-sm relative z-10 text-black">
       <div className="flex items-center gap-2">
         <BsTelephone className="text-black" />
         <h3 className="text-black">+0095741135</h3>
