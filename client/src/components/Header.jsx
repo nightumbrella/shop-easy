@@ -6,8 +6,15 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
 import { CiMenuBurger } from "react-icons/ci";
+import { UseModal, changeModal } from "../redux/modalSLice";
+import { useDispatch } from "react-redux";
 
 const Header = () => {
+  const dispatch = useDispatch();
+  const { modal } = UseModal();
+  const openModal = () => {
+    dispatch(changeModal());
+  };
   const links = [
     {
       id: 1,
@@ -99,15 +106,33 @@ const Header = () => {
         </div>
 
         <div className=" items-center gap-3 flex">
-          <div className="relative w-72 max-lg:hidden flex ">
+          {/* <div className="relative w-72 max-lg:hidden flex ">
+           
+
             <input
               type="text"
               placeholder="Search Product..."
               className="rounded-2xl border w-full px-3 py-1 text-black outline-none bg-slate-100 pr-10"
-            />
+            /> 
             <button className="absolute right-2 top-2/4 -translate-y-2/4">
               <AiOutlineSearch className="text-2xl" />
             </button>
+          </div> */}
+          <div className="" onClick={openModal}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"
+              />
+            </svg>
           </div>
 
           <div className=" items-center gap-2 font-medium rounded-full hover:bg-slate-100 duration-300 cursor-pointer px-3 py-2 ml-10 max-xl:hidden flex">
