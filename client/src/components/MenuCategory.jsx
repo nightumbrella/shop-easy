@@ -3,6 +3,8 @@ import img from "../assets/pexels-melvin-buezo-2529148.jpg";
 import { Link } from "react-router-dom";
 import { UseModal, changeModal } from "../redux/modalSLice";
 import { useDispatch } from "react-redux";
+import { motion as m } from "framer-motion";
+
 const MenuCategory = () => {
   const { modal } = UseModal();
   const dispatch = useDispatch();
@@ -12,7 +14,7 @@ const MenuCategory = () => {
 
   if (modal) {
     document.body.style.overflow = "hidden";
-  }
+  }else document.body.style.overflow = 'auto'
 
   const variants = {
     show: {
@@ -20,18 +22,27 @@ const MenuCategory = () => {
       opacity: 1,
     },
     hide: {
-      transform: "translateY(5em)",
+      transform: "translateY(-100%)",
       opacity: 0,
     },
   };
 
   return (
     <>
-      {modal && (
-        <div className="w-screen  h-screen absolute flex justify-center items-start z-50 top-0 left-0 bg-[#EEF0F4]">
+      
+        <m.div
+          className="w-screen  h-screen absolute flex justify-center items-start z-50 top-0 left-0 bg-[#EEF0F4]"
+          initial={false}
+          animate={modal ? "show" : "hide"}
+          variants={variants}
+
+        >
           <div className="flex p-20  relative h-[90vh] mt-[5vh] w-[95vw] rounded-xl bg-[#333] ">
             {/* exit */}
-            <div className="absolute  p-2 -top-11 right-2/4 z-50" onClick={openModal}>
+            <div
+              className="absolute  p-2 -top-11 right-2/4 z-50"
+              onClick={openModal}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -100,8 +111,8 @@ const MenuCategory = () => {
             </div>
             {/* right */}
           </div>
-        </div>
-      )}
+        </m.div>
+      
     </>
   );
 };

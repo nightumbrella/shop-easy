@@ -14,7 +14,7 @@ const Header = () => {
   const { modal } = UseModal();
   const openModal = () => {
     dispatch(changeModal());
-    console.log("click")
+    console.log("click");
   };
   const links = [
     {
@@ -45,6 +45,7 @@ const Header = () => {
     "Jewellery",
   ];
   const [showCat, setShowCat] = useState(false);
+  
   return (
     <div className="relative  flex items-center px-10">
       <div className="flex items-center  justify-between py-3 flex-auto">
@@ -71,16 +72,13 @@ const Header = () => {
                         showCat
                           ? {
                               height: 300,
+                              transform: "translateY(0em)",
                             }
                           : {
-                              height: "0%",
-                              transition: 0.3,
+                              height: " 0px",
+                              transition: { delay: 2, duration: 2 },
                             }
                       }
-                      exit={{
-                        height: 0,
-                        transition: 0.3,
-                      }}
                       className="absolute top-10 left-5 bg-white px-3 py-3 rounded-lg w-60 h-0 overflow-hidden shadow-md"
                     >
                       {category.map((link, idx) => (
@@ -119,7 +117,7 @@ const Header = () => {
               <AiOutlineSearch className="text-2xl" />
             </button>
           </div> */}
-          <div className="" onClick={openModal}>
+          <div className="cursor-pointer" onClick={openModal}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

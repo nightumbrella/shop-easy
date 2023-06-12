@@ -22,6 +22,7 @@ const Home = () => {
         </div>
         <div className="grid grid-cols-5 place-items-center">
           {product.map((product) => (
+            
             <Product category={product.id} key={product.id} {...product} />
           ))}
         </div>
