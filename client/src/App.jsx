@@ -9,6 +9,7 @@ import Category from "./pages/Category";
 import Top from "./components/Top";
 import {} from "react";
 import MenuCategory from "./components/MenuCategory";
+import Wishlist from './pages/Wishlist'
 
 const Layout = () => {
   return (
@@ -43,6 +44,10 @@ const App = () => {
         {
           path: "category/:id",
           element: <Category />,
+        },
+        {
+          path: "wishlist",
+          element: <Wishlist />,
         },
       ],
     },

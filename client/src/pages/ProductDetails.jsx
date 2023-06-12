@@ -10,7 +10,6 @@ const ProductDetails = () => {
   console.log(product);
   let productDetail = product.find((product) => product.id == id);
 
-  console.log(productDetail);
   return (
     <div className="border rounded-md px-5 py-3 relative mb-10">
       {/* <Carousel className="w-full h-full">
