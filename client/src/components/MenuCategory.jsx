@@ -50,7 +50,7 @@ const MenuCategory = () => {
             {/* exit */}
             {/* left */}
 
-            <div className="relative  group">
+            <div className="relative border-red-500 border group w-[600px]">
               <Link to={"/products/sneakers"} onClick={openModal}>
                 <img
                   src={img}
@@ -90,7 +90,7 @@ const MenuCategory = () => {
             {/* left */}
 
             {/* right */}
-            <div className="">
+            <div className="border border-red-800 ">
               <div>
                 <h1>Man Collection</h1>
               </div>
