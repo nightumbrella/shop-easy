@@ -9,11 +9,12 @@ import Category from "./pages/Category";
 import Top from "./components/Top";
 import {} from "react";
 import MenuCategory from "./components/MenuCategory";
-import Wishlist from './pages/Wishlist'
+import Wishlist from "./pages/Wishlist";
+import Cart from "./pages/Cart";
 
 const Layout = () => {
   return (
-    <div className="relative">
+    <div className='relative'>
       <Top />
       <MenuCategory />
       <Header />
@@ -48,6 +49,10 @@ const App = () => {
         {
           path: "wishlist",
           element: <Wishlist />,
+        },
+        {
+          path: "cart",
+          element: <Cart />,
         },
       ],
     },

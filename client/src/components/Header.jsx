@@ -151,10 +151,10 @@ const Header = () => {
             <RiUser6Line className='text-xl' />
             Account
           </div>
-          <div className=' items-center gap-2 font-medium rounded-full hover:bg-slate-100 px-3 duration-300 cursor-pointer py-2 max-xl:hidden flex'>
+          <Link to={'/cart'} className=' items-center gap-2 font-medium rounded-full hover:bg-slate-100 px-3 duration-300 cursor-pointer py-2 max-xl:hidden flex'>
             <CgShoppingCart className='text-xl' />
             Cart
-          </div>
+          </Link>
         </div>
       </div>
       <div className=' rounded-full p-4 bg-slate-300 md:hidden'>
