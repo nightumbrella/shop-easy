@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AiOutlineSearch,AiOutlineHeart } from "react-icons/ai";
+import { AiOutlineSearch, AiOutlineHeart } from "react-icons/ai";
 import { RiUser6Line } from "react-icons/ri";
 import { CgShoppingCart } from "react-icons/cg";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
@@ -9,11 +9,13 @@ import { CiMenuBurger } from "react-icons/ci";
 import { UseModal, changeModal } from "../redux/modalSLice";
 import { useDispatch } from "react-redux";
 import { UseWishlist } from "../redux/WishlistSlice";
+import { UseCart } from "../redux/CartSlice";
 
 const Header = () => {
-  const {wishlist} =UseWishlist()
+  const { wishlist } = UseWishlist();
   const dispatch = useDispatch();
   const { modal } = UseModal();
+  const { cart } = UseCart();
   const openModal = () => {
     dispatch(changeModal());
     console.log("click");
@@ -143,17 +145,23 @@ const Header = () => {
             to={"wishlist"}
             className='relative'
           >
-            <div className='absolute -top-2 -right-3   bg-[#116D6E] text-white w-4 h-4 flex items-center justify-center rounded-full px-3'>{wishlist.length}</div>
-            <AiOutlineHeart className="w-6 h-6"/>
+            <div className='absolute -top-2 -right-3   bg-[#116D6E] text-white w-4 h-4 flex items-center justify-center rounded-full px-3'>
+              {wishlist.length}
+            </div>
+            <AiOutlineHeart className='w-6 h-6' />
           </Link>
 
           <div className=' items-center gap-2 font-medium rounded-full hover:bg-slate-100 duration-300 cursor-pointer px-3 py-2  max-xl:hidden flex'>
             <RiUser6Line className='text-xl' />
             Account
           </div>
-          <Link to={'/cart'} className=' items-center gap-2 font-medium rounded-full hover:bg-slate-100 px-3 duration-300 cursor-pointer py-2 max-xl:hidden flex'>
+          <Link
+            to={"/cart"}
+            className=' items-center gap-2 font-medium rounded-full hover:bg-slate-100 px-3 duration-300 cursor-pointer py-2 max-xl:hidden flex'
+          >
             <CgShoppingCart className='text-xl' />
             Cart
+            <span>{cart.length}</span>
           </Link>
         </div>
       </div>

@@ -1,9 +1,10 @@
 import React from "react";
 import { UseWishlist, addWishlist } from "../redux/WishlistSlice";
 import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/CartSlice";
 const Wishlist = () => {
   const { wishlist } = UseWishlist();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   return (
     <div className='w-[1800px] mx-auto pt-10 mb-10'>
@@ -23,10 +24,16 @@ const Wishlist = () => {
 
             <div className='absolute top-2/4 translate-y-[100%] duration-500  group-hover:translate-y-0  border backdrop  overflow-hidden p-4  rounded-b-lg  left-2 backdrop-blur-md w-[calc(100%-16px)]  h-[50%] '>
               <div className='flex items-center justify-between w-full '>
-                <button className='px-2 py-2 rounded-sm bg-[#116D6E] text-white active:scale-[.99] '  onClick={() => dispatch(addWishlist(wish.id))}>
+                <button
+                  className='px-2 py-2 rounded-sm bg-[#116D6E] text-white active:scale-[.99] '
+                  onClick={() => dispatch(addWishlist(wish.id))}
+                >
                   remove list
                 </button>
-                <button className='px-2 py-2  active:scale-[.99]  rounded-sm bg-[#116D6E] text-white'>
+                <button
+                  className='px-2 py-2  active:scale-[.99]  rounded-sm bg-[#116D6E] text-white'
+                  onClick={() => dispatch(addToCart(wish))}
+                >
                   add to cart
                 </button>
               </div>
