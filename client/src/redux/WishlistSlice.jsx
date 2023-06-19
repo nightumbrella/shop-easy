@@ -2,8 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 import { useSelector } from "react-redux";
 import { product } from "../../product";
 
+const wish =
+  localStorage.getItem("wishlist") !== null
+    ? JSON.parse(localStorage.getItem("wishlist"))
+    : [];
+
 const initialState = {
-  wishlist: [],
+  wishlist: wish,
 };
 
 const WishlistReducer = createSlice({
@@ -15,8 +20,17 @@ const WishlistReducer = createSlice({
         (wishlist) => wishlist.id === payload
       );
       const findData = product.find((p) => p.id === payload);
-      
-      state.wishlist.push(findData);
+
+      if (existingProducts) {
+        state.wishlist = state.wishlist.filter((wish) => wish.id !== payload);
+      } else {
+        state.wishlist.push(findData);
+      }
+
+      localStorage.setItem(
+        "wishlist",
+        JSON.stringify(state.wishlist.map((item) => item))
+      );
     },
   },
 });

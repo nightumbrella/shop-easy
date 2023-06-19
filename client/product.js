@@ -5,7 +5,7 @@ export const product = [
   {
     id: 1,
     title: "airpods-red",
-    thumbnail: "/headphone/airpods-red.jpg",
+    thumbnail: "https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
     price: 99,
     category: "technology",
     images: [
@@ -26,7 +26,7 @@ export const product = [
   {
     id: 2,
     title: "airpods",
-    thumbnail: "/headphone/airpods.jpg",
+    thumbnail: "https://images.unsplash.com/photo-1545127398-14699f92334b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80",
     price: 199,
     category: "technology",
     images: [

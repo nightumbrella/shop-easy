@@ -76,7 +76,7 @@ const Footer = () => {
       <div className="">
         <div className="flex gap-5 justify-end mb-10">
           {social.map((social,idx) => (
-            <div key={idx} className="rounded-full p-3 border hover:bg-green-300 cursor-pointer duration-300">
+            <div key={idx} className="rounded-full p-3 border hover:bg-green-900 hover:text-white  cursor-pointer duration-300">
               {social}
             </div>
           ))}

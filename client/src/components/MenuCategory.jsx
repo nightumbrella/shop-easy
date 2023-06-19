@@ -40,9 +40,10 @@ const MenuCategory = () => {
           <div className="flex p-20  relative h-[90vh] mt-[5vh] w-[95vw] rounded-xl bg-[#333] ">
             {/* exit */}
             <div
-              className="absolute  p-2 -top-11 right-2/4 z-50"
+              className="absolute  p-2 -top-11 right-2/4 z-50 cursor-pointer"
               onClick={openModal}
             >
+              
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -61,7 +62,7 @@ const MenuCategory = () => {
             {/* exit */}
             {/* left */}
 
-            <div className="relative border-red-500 border group w-[600px]">
+            <div className="relative  group w-[600px]">
               <Link to={"/products/sneakers"} onClick={openModal}>
                 <img
                   src={img}
@@ -101,7 +102,7 @@ const MenuCategory = () => {
             {/* left */}
 
             {/* right */}
-            <div className="border border-red-800 ">
+            <div className=" ">
               <div>
                 <h1>Man Collection</h1>
               </div>
